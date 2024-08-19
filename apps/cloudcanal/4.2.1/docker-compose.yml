@@ -1,0 +1,52 @@
+services:
+  console:
+    container_name: ${CONTAINER_NAME}-console
+    networks:
+      1panel-network:
+        ipv4_address: 172.18.0.3
+    ports:
+      - "${PANEL_CONSOLE_PORT_ONE}:8111"
+      - "${PANEL_CONSOLE_PORT_TWO}:7007"
+    image: clougence/cloudcanal-console:4.2.1.0
+    volumes:
+      - cloudcanal_console_volume:/home/clougence
+    mac_address: "fa:16:3e:a9:01:4b"
+    labels:
+      createdBy: "Apps"
+
+  sidecar:
+    container_name: ${CONTAINER_NAME}-sidecar
+    networks:
+      1panel-network:
+        ipv4_address: 172.18.0.4
+    ports:
+      - "${PANEL_SIDECAR_PORT}:8787"
+    image: clougence/cloudcanal-sidecar:4.2.1.0
+    volumes:
+      - cloudcanal_sidecar_volume:/home/clougence
+    depends_on:
+      - console
+    labels:
+      createdBy: "Apps"
+
+  prometheus:
+    container_name: ${CONTAINER_NAME}-prometheus
+    networks:
+      1panel-network:
+        ipv4_address: 172.18.0.5
+    ports:
+      - "${PANEL_PROMETHEUS_PORT}:9090"
+    image: clougence/cloudcanal-prometheus:4.2.1.0
+    depends_on:
+      - console
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
+
+volumes:
+  cloudcanal_console_volume:
+  cloudcanal_sidecar_volume:
+    external: true

@@ -1,0 +1,34 @@
+additionalProperties:
+  formFields:
+    - default: "8111"
+      edit: true
+      envKey: PANEL_CONSOLE_PORT_ONE
+      labelEn: console Port 1
+      labelZh: console 端口1
+      required: true
+      rule: paramPort
+      type: number
+    - default: "7007"
+      edit: true
+      envKey: PANEL_CONSOLE_PORT_TWO
+      labelEn: console Port 2
+      labelZh: console 端口2
+      required: true
+      rule: paramPort
+      type: number
+    - default: "18787"
+      edit: true
+      envKey: PANEL_SIDECAR_PORT
+      labelEn: Sidecar Port
+      labelZh: Sidecar 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "19090"
+      edit: true
+      envKey: PANEL_PROMETHEUS_PORT
+      labelEn: prometheus Port
+      labelZh: prometheus 端口
+      required: true
+      rule: paramPort
+      type: number

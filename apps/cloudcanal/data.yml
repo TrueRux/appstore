@@ -1,0 +1,18 @@
+name: cloudcanal
+tags:
+  - 实用工具
+title: 企业级数据同步、迁移工具
+description: 企业级数据同步、迁移工具
+additionalProperties:
+  key: cloudcanal
+  name: cloudcanal
+  tags:
+    - Tool
+  shortDescZh: 数据同步迁移工具
+  shortDescEn: data sync tool
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  website: https://www.clougence.com/?src=cc-doc
+  github: https://www.clougence.com/cc-doc/intro/product_intro?src=clougence
+  document: https://www.clougence.com/cc-doc/intro/product_intro?src=clougence

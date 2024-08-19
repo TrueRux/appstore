@@ -1,0 +1,10 @@
+additionalProperties:
+  formFields:
+    - default: "8000"
+      edit: true
+      envKey: PANEL_ADMIN_PORT
+      labelEn: admin port
+      labelZh: admin 端口
+      required: true
+      rule: paramPort
+      type: number
