@@ -1,0 +1,18 @@
+name: directus
+tags:
+  - 实用工具
+title: headless CMS
+description: directus 基于 Node.js 和 Vue.js， 是一个开放数据平台，开源、模块化、可扩展、可扩展。
+additionalProperties:
+  key: directus
+  name: directus
+  tags:
+    - Website
+  shortDescZh: headless CMS
+  shortDescEn: headless CMS
+  type: Website
+  crossVersionUpdate: false
+  limit: 0
+  website: https://directus.io/
+  github: https://github.com/directus/directus
+  document: https://docs.directus.io/getting-started/introduction.html

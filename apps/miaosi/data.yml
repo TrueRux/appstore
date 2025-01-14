@@ -1,11 +1,11 @@
-name: admin
+name: miaosi
 tags:
   - 实用工具
 title: 权限管理系统
 description: 前端使用Vue全家桶以及Element组件 后端使用.Net8 WebApi完全分离的权限管理系统
 additionalProperties:
-  key: admin
-  name: admin
+  key: miaosi
+  name: miaosi
   tags:
     - Tool
   shortDescZh: 权限管理系统

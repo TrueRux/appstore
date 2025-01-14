@@ -5,7 +5,7 @@ services:
       1panel-network:
     ports:
       - "${PANEL_ADMIN_PORT}:8000"
-    image: admin:8.3.0
+    image: miaosi/miaosi-admin:0.0.1
     volumes:
       - ./ConfigCenter:/app/ConfigCenter
       - ./upload/:/app/wwwroot/upload

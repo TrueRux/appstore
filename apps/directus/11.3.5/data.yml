@@ -1,0 +1,138 @@
+additionalProperties:
+  formFields:
+    - default: "8055"
+      edit: true
+      envKey: DIRECTUS_ADMIN_PORT
+      labelEn: admin port
+      labelZh: 管理端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "admin@example.com"
+      edit: true
+      envKey: DIRECTUS_EMAIL
+      labelEn: Account_Email
+      labelZh: 管理账号邮箱
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: DIRECTUS_PASSWORD
+      labelEn: Account_Password
+      labelZh: 管理账号密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: "255d861b-5ea1-5996-9aa3-922530ec40b1"
+      edit: true
+      envKey: DIRECTUS_KEY
+      labelEn: Key
+      labelZh: 项目的唯一标识符
+      required: true
+      type: text
+    - default: "6116487b-cda1-52c2-b5b5-c8022c45e263"
+      edit: true
+      envKey: DIRECTUS_SECRET
+      labelEn: Secret
+      labelZh: 项目的秘密字符串
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: DIRECTUS_DB_HOST
+      key: postgresql
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: service
+    - default: "5432"
+      edit: true
+      envKey: DIRECTUS_DB_PORT
+      labelEn: Database Port Number
+      labelZh: 数据库端口号
+      required: true
+      rule: paramPort
+      type: number
+    - default: "directus"
+      envKey: DIRECTUS_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "directus"
+      envKey: DIRECTUS_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      envKey: DIRECTUS_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      edit: true
+      envKey: REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: Redis服务
+      required: true
+      type: service
+    - default: "6379"
+      edit: true
+      envKey: REDIS_PORT
+      labelEn: Redis Service Port
+      labelZh: Redis服务端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: DIRECTUS_REDIS_ROOT_PASSWORD
+      labelEn: Redis Password
+      labelZh: Redis 密码
+      required: false
+      type: password
+    - default: "s3"
+      edit: true
+      envKey: STORAGE_LOCATION
+      labelEn: Storage Location
+      labelZh: 存储位置
+      type: text
+    - default: ""
+      edit: true
+      envKey: STORAGE_S3_KEY
+      labelEn: S3 Key
+      labelZh: S3 Key
+      type: text
+    - default: ""
+      edit: true
+      envKey: STORAGE_S3_SECRET
+      labelEn: S3 Secret
+      labelZh: S3 密钥
+      type: text
+    - default: ""
+      edit: true
+      envKey: STORAGE_S3_BUCKET
+      labelEn: S3 Bucket Name
+      labelZh: S3 桶名称
+      type: text
+    - default: "没有则为空"
+      edit: true
+      envKey: STORAGE_S3_REGION
+      labelEn: S3 Region
+      labelZh: S3 区域
+      type: text
+    - default: ""
+      edit: true
+      envKey: STORAGE_S3_ENDPOINT
+      labelEn: S3 Endpoint
+      labelZh: S3 地址
+      type: text
