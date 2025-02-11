@@ -24,6 +24,29 @@ additionalProperties:
       required: true
       rule: paramComplexity
       type: password
+    - default: ""
+      edit: true
+      envKey: PUBLIC_URL
+      labelEn: Public Url
+      labelZh: 对外地址
+      type: text
+    - default: ""
+      edit: true
+      envKey: CORS_ENABLED
+      labelEn: Enable Cors
+      labelZh: 开启 Cors
+      type: select
+      values:
+        - label: 启用
+          value: "true"
+        - label: 禁用
+          value: "false"
+    - default: ""
+      edit: true
+      envKey: CORS_ORIGIN
+      labelEn: Cors Origin
+      labelZh: Cors 来源
+      type: text
     - default: "255d861b-5ea1-5996-9aa3-922530ec40b1"
       edit: true
       envKey: DIRECTUS_KEY
@@ -117,7 +140,7 @@ additionalProperties:
       envKey: STORAGE_S3_SECRET
       labelEn: S3 Secret
       labelZh: S3 密钥
-      type: text
+      type: password
     - default: ""
       edit: true
       envKey: STORAGE_S3_BUCKET
@@ -135,4 +158,82 @@ additionalProperties:
       envKey: STORAGE_S3_ENDPOINT
       labelEn: S3 Endpoint
       labelZh: S3 地址
+      type: text
+    - default: "true"
+      edit: true
+      envKey: EMAIL_VERIFY_SETUP
+      labelEn: Enable email verify
+      labelZh: 开启 邮箱验证
+      type: select
+      values:
+        - label: 启用
+          value: "true"
+        - label: 禁用
+          value: "false"
+    - default: "smtp"
+      edit: true
+      envKey: EMAIL_TRANSPORT
+      labelEn: email transport
+      labelZh: 邮箱验证方式
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_FROM
+      labelEn: email from
+      labelZh: 邮箱发送人
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_SMTP_HOST
+      labelEn: email smtp host
+      labelZh: 邮箱 smtp 地址
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_SMTP_PORT
+      labelEn: email smtp port
+      labelZh: 邮箱 smtp 端口
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_SMTP_USER
+      labelEn: email smtp user
+      labelZh: 邮箱 smtp 用户
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_SMTP_PASSWORD
+      labelEn: email smtp password
+      labelZh: 邮箱 smtp 密码
+      rule: paramComplexity
+      type: password
+    - default: ""
+      edit: true
+      envKey: EMAIL_SMTP_POOL
+      labelEn: Use SMTP pooling
+      labelZh: 启用邮箱 smtp 池
+      type: text
+    - default: "true"
+      edit: true
+      envKey: EMAIL_SMTP_SECURE
+      labelEn: Enable initial TLS
+      labelZh: 启用邮箱 smtp TLS
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_SMTP_IGNORE_TLS
+      labelEn: Ignore STARTTLS
+      labelZh: 忽略 smarttls
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_SMTP_NAME
+      labelEn: SMTP client hostname
+      labelZh: 邮箱 smtp 名称
+      type: text
+    - default: "多个地址以 , 分隔"
+      edit: true
+      envKey: USER_REGISTER_URL_ALLOW_LIST
+      labelEn: User Register url allow list
+      labelZh: 用户验证 Url
       type: text
